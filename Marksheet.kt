@@ -11,7 +11,7 @@ class Marksheet(a_s1: Int, a_s2: Int, a_s3: Int) {
             println("Fail")
         } else {
             var total = s1 + s2 + s3
-            var per = (total / 210) * 100
+            var per = (total.toDouble() / 300) * 100
             if (per >= 70) {
                 result = "Passed with Distinction"
             } else if (per >= 60) {
@@ -22,7 +22,7 @@ class Marksheet(a_s1: Int, a_s2: Int, a_s3: Int) {
                 result = "Passed with Third Class"
             }
             println(total)
-            println(per)
+            println(String.format("%.2f", per).toDouble())
             println(result)
         }
     }
